@@ -4,6 +4,8 @@
  */
 "use-strict";
 
+import "./simple-lightbox.css";
+
 /**
  * Setup lightbox, if there is any to setup
  */
@@ -38,6 +40,12 @@ function setupImageLightbox(imgElement) {
         baseContainer.addEventListener("close", () => baseContainer.remove());
         const lightboxImg = document.createElement("img");
         lightboxImg.src = imgElement.src;
+        const closeBtn = document.createElement("button");
+        closeBtn.type = "button";
+        closeBtn.title = "Close";
+        closeBtn.innerText = "X";
+        closeBtn.addEventListener("click", () => baseContainer.remove());
+        baseContainer.appendChild(closeBtn);
         baseContainer.appendChild(lightboxImg);
         document.body.appendChild(baseContainer);
         // show lightbox
