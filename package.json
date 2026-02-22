@@ -1,0 +1,17 @@
+{
+  "name": "js-simple-lightbox",
+  "module": "simple-lightbox.js",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {}
+}
