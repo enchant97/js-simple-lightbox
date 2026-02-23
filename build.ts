@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 await Bun.build({
-    entrypoints: ['simple-lightbox.js'],
+    entrypoints: ['src/simple-lightbox.js'],
     outdir: './dist',
     naming: '[dir]/[name].[hash].[ext]',
     minify: true,

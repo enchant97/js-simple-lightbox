@@ -1,6 +1,6 @@
 {
   "name": "js-simple-lightbox",
-  "module": "simple-lightbox.js",
+  "module": "src/simple-lightbox.js",
   "license": "MIT",
   "private": true,
   "type": "module",
