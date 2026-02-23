@@ -1,3 +1,12 @@
+img[data-lightbox-is-setup="true"] {
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+
+img[data-lightbox-is-setup="true"]:hover {
+    filter: brightness(35%);
+}
+
 #lightbox {
     background-color: transparent;
     border: none;
