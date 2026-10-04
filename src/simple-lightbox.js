@@ -9,7 +9,7 @@ import "./simple-lightbox.css";
 /**
  * Setup lightbox, if there is any to setup
  */
-function doSetup() {
+export default function doSetup() {
     /** @type {HTMLElement[]} */
     const lightboxes = document.querySelectorAll("[data-lightbox]");
     lightboxes.forEach((lightbox) => {
@@ -57,8 +57,10 @@ function setupImageLightbox(imgElement) {
  * Ensure setup is always called,
  * no matter how script is included
  */
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", doSetup);
-} else {
-    doSetup();
+if (typeof document !== "undefined") {
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", doSetup);
+    } else {
+        doSetup();
+    }
 }
